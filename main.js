@@ -1,5 +1,4 @@
-prediction_1="";
-prediction_2="";
+prediction="";
 
 Webcam.set({
     width: 350,
@@ -28,7 +27,7 @@ function modelLoaded(){
 
 function speak(){
     var synth = window.speechSynthesis;
-    speak_data_1 = "The prediction is "+ prediction_1;
-    var utterThis= new SpeechSynthesisUtterance(speak_data_1 + speak_data_2);
+    speak_data = "The prediction is "+ prediction;
+    var utterThis= new SpeechSynthesisUtterance(speak_data);
     synth.speak(utterThis);
 }
